@@ -1,0 +1,90 @@
+let value = 15;
+let negValue = -value;
+console.log("Negative Value of", value, "is", negValue); // Negative Value of 15 is -15
+// console.log() ham aise messages bhi print kar sakte hain with variables !
+
+let num1, num2, num3;
+num1 = num2 = num3 = 10; // Chained assignment
+console.log("Value of num1, num2, and num3 is", num1, num2, num3); // 10 10 10
+
+let addition = value + 5; // 15 + 5 = 20
+let subtraction = value - 5; // 15 - 5 = 10
+let multiplication = value * 2; // 15 * 2 = 30
+let division = value / 3; // 15 / 3 = 5
+let modulus = value % 4; // 15 % 4 = 3 (remainder of 15 divided by 4)
+let exponentiation = value ** 2; // 15 ** 2 = 225 (15 raised to the power of 2)
+
+let x = 10;
+const y = x++; // Postfix increment
+console.log("Value of x is", x, "and y is", y); // 11 10
+
+x = 10;
+const z = ++x; // Prefix increment
+console.log("Value of x is", x, "and z is", z); // 11 11
+
+let p = 10;
+const q = p--; // Postfix decrement
+console.log("Value of p is", p, "and q is", q); // 9 10
+
+p = 10;
+const r = --p; // Prefix decrement
+console.log("Value of p is", p, "and r is", r); // 9 9
+
+let str1 = "Hello";
+let str2 = "World";
+let concatenation = str1 + " " + str2;
+console.log(concatenation); // Hello World
+
+console.log(str1 * 2 ); // NaN (Not a Number, because you can't multiply a string by a number)
+
+// Production grade code keliye, Precedence of operators ka itna kaam nahi hota,
+// lekin samajhna zaroori hai ki kaunsa operator pehle chalega.
+
+// Operator precedence in JavaScript (Highest to Lowest):
+// 1 - Grouping: ()
+// 2 - Member Access / Function Call: .  []  ()
+// 3 - new (with arguments): new MyFunction()
+// 4 - Postfix Increment/Decrement: expr++  expr--
+// 5 - Unary Operators: ++expr  --expr  +expr  -expr  ~  !  typeof  void  delete
+// 6 - Exponentiation: **
+// 7 - Multiplicative: *  /  %
+// 8 - Additive: +  -
+// 9 - Bitwise Shift: <<  >>  >>>
+// 10 - Relational: <  <=  >  >=  in  instanceof
+// 11 - Equality: ==  !=  ===  !==
+// 12 - Bitwise AND: &
+// 13 - Bitwise XOR: ^
+// 14 - Bitwise OR: |
+// 15 - Logical AND: &&
+// 16 - Logical OR: ||
+// 17 - Nullish Coalescing: ??
+// 18 - Conditional (Ternary): condition ? expr1 : expr2
+// 19 - Assignment: =  +=  -=  *=  /=  %=  <<=  >>=  >>>=  &=  ^=  |=  &&=  ||=  ??=
+// 20 - Comma: ,
+
+// Ye niche wale jo sab likhen hain, yeh corporate mein bad practice hain !!
+console.log("1" + 2); // 12
+console.log(1 + "2"); // 12
+console.log("1" + "2"); // 12
+console.log("1" + 2 + "3"); // 33
+console.log("1" + 2 + 3); // 123
+console.log(1 + 2 + "3"); // 33
+console.log(1 + 2 + "3" + 4 + 5); // 3345
+/* Jab ek string milgya then uske baad jitne bhi numbers aayenge,
+   unhe string mein convert kar diya jayega.
+*/
+
+console.log(true); // true
+console.log(false); // false
+console.log(true + true); // 2 (true is converted to 1)
+console.log(true + false); // 1 (true is converted to 1, false is converted to 0)
+
+console.log(+"5"); // 5 (string "5" is converted to number 5)
+console.log(+"abc"); // NaN (string "abc" cannot be converted to a number) 
+console.log(+""); // 0 (empty string is converted to number 0)
+console.log(+" "); // 0 (space is treated as empty string)
+
+console.log(+true); // 1 (true is converted to 1)
+console.log(+false); // 0 (false is converted to 0)
+console.log(+null); // 0 (null is converted to 0)
+console.log(+undefined); // NaN (undefined cannot be converted to a number)
