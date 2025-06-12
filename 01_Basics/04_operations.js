@@ -41,26 +41,27 @@ console.log(str1 * 2 ); // NaN (Not a Number, because you can't multiply a strin
 // lekin samajhna zaroori hai ki kaunsa operator pehle chalega.
 
 // Operator precedence in JavaScript (Highest to Lowest):
-// 1 - Grouping: ()
-// 2 - Member Access / Function Call: .  []  ()
-// 3 - new (with arguments): new MyFunction()
-// 4 - Postfix Increment/Decrement: expr++  expr--
-// 5 - Unary Operators: ++expr  --expr  +expr  -expr  ~  !  typeof  void  delete
-// 6 - Exponentiation: **
-// 7 - Multiplicative: *  /  %
-// 8 - Additive: +  -
-// 9 - Bitwise Shift: <<  >>  >>>
-// 10 - Relational: <  <=  >  >=  in  instanceof
-// 11 - Equality: ==  !=  ===  !==
-// 12 - Bitwise AND: &
-// 13 - Bitwise XOR: ^
-// 14 - Bitwise OR: |
-// 15 - Logical AND: &&
-// 16 - Logical OR: ||
-// 17 - Nullish Coalescing: ??
-// 18 - Conditional (Ternary): condition ? expr1 : expr2
-// 19 - Assignment: =  +=  -=  *=  /=  %=  <<=  >>=  >>>=  &=  ^=  |=  &&=  ||=  ??=
-// 20 - Comma: ,
+// 1  - Grouping: ()                                                         [N/A]
+// 2  - Member Access / Function Call: .  []  ()                        [Left-to-Right]
+// 3  - new (with arguments): new MyFunction()                          [Right-to-Left]
+// 4  - Postfix Increment/Decrement: expr++  expr--                          [N/A]
+// 5  - Unary Operators: ++expr  --expr  +  -  ~  ! typeof void delete  [Right-to-Left]
+// 6  - Exponentiation: **                                              [Right-to-Left]
+// 7  - Multiplicative: *  /  %                                         [Left-to-Right]
+// 8  - Additive: +  -                                                  [Left-to-Right]
+// 9  - Bitwise Shift: <<  >>  >>>                                      [Left-to-Right]
+// 10 - Relational: <  <=  >  >=  in  instanceof                        [Left-to-Right]
+// 11 - Equality: ==  !=  ===  !==                                      [Left-to-Right]
+// 12 - Bitwise AND: &                                                  [Left-to-Right]
+// 13 - Bitwise XOR: ^                                                  [Left-to-Right]
+// 14 - Bitwise OR: |                                                   [Left-to-Right]
+// 15 - Logical AND: &&                                                 [Left-to-Right]
+// 16 - Logical OR: ||                                                  [Left-to-Right]
+// 17 - Nullish Coalescing: ??                                          [Left-to-Right]
+// 18 - Conditional (Ternary): condition ? expr1 : expr2                [Right-to-Left]
+// 19 - Assignment: = += -= *= /= %= <<= >>= >>>= &= ^= |= &&= ||= ??=  [Right-to-Left]
+// 20 - Comma: ,                                                        [Left-to-Right]
+
 
 // Ye niche wale jo sab likhen hain, yeh corporate mein bad practice hain !!
 console.log("1" + 2); // 12
