@@ -42,3 +42,7 @@ Har naye version ke sath naye features add hote gaye hain jo JavaScript ko aur z
 JavaScript is the backbone of modern web development. It is used both on the frontend (with frameworks like React, Angular, Vue) and backend (with Node.js).
 
 **Aaj ke zamane me web development ka matlab hi JavaScript se hai — chahe user interface banana ho ya server-side logic likhna ho.**
+
+### Resources
+* **ECMAScript 2026**: https://tc39.es/ecma262/multipage/#sec-intro
+* **MDN WebDocs**: https://developer.mozilla.org/en-US/docs/Web/JavaScript
