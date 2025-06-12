@@ -31,8 +31,10 @@ accountCity = "Delhi";
    let aur const block scope ke andar hi kaam karte hain, isliye yeh zyada safe hain.
 */
 
-let accountState;
+let accountState; 
 // Agar sirf variable declare karke chod dete hein, toh uski value undefined hoti hai.
+let state = undefined;
+// Yeh bhi undefined hi hai, lekin yeh explicitly set kiya gaya hai.
 
 // accountId = 23546; // Error: Assignment to constant variable.
 // const mein variable ki value change nahi kar sakte.
