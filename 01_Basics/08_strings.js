@@ -17,7 +17,7 @@ console.log(`${name} has ${repoCount} repositories.`); // String Interpolation
    aur ismein variables/expressions ko ${} ke andar likhte hain.
 */
 
-/* new ko jab primitive data type ke sath use karte h,
+/* "new" ko jab primitive data type ke sath use karte h,
    uss primitive value ko object mein convert kar deta hai.
    // new String() se string object create hota hai.
    // new Number() se number object create hota hai.
