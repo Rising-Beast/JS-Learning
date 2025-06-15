@@ -30,8 +30,8 @@ const gameName = new String("Call of Duty");
    Isliye, iski length bhi hoti hai, aur yeh String.prototype se inherit hota hai.
 */
 
-console.log(gameName); // String object
-console.log(typeof gameName); // object
+console.log(gameName); // [String: 'Call of Duty']
+console.log(typeof gameName); // object (String object)
 
 
 // To access each character of the string, we can use indexing:
