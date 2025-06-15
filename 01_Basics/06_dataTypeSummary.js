@@ -55,7 +55,7 @@ let person = {
 }; // Object
 console.log(person); // { name: 'IronMan', realName: 'Tony Stark', age: 45 }   
 
-// Basic function is "<funcName>(){}" 
+// Basic function is "function(){}" 
 const myFunc = function() {
     console.log("Hello from myFunc!");
 }; // Function as a variable
