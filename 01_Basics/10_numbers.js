@@ -13,7 +13,7 @@ const amount = 856321534.5864;
 // 1. toString() - Number ko string mein convert karta hai.
 console.log(balance.toString()); // "500.82896"
 // Ab hame iske upar string methods use kar sakte hain.
-console.log(balance.toString().length); // 8
+console.log(balance.toString().length); // 9
 
 
 // 2. toFixed() - Number ko specified decimal places mein round off kar k, string mein convert karta hai.
@@ -31,11 +31,3 @@ console.log(amount.toLocaleString("en-IN")); // "8,56,32,153.586"
 console.log(amount.toLocaleString("en-US")); // "856,321,534.586"
 // By default, yeh current locale (automatically uses browser's/OS's language settings) ke according format karta hai.
 // 3 decimal places ke liye, yeh default format karta hai.
-
-console.log(amount.toLocaleString("ja-JP", { style: "currency", currency: "JPY" })); // "￥856,321,534"
-// Rounds off the decimal places according to the currency format.
-// style and currency dono ko sath mein hin use karna padega !
-console.log(amount.toLocaleString("en-IN", { style: "currency", currency: "INR" })); // "₹8,56,32,153.59"
-
-console.log(amount.toLocaleString("en-IN", { notation: "compact" , style: "currency", currency: "INR" })); // "₹86Cr"
-// Compact notation se large numbers ko chhota format mein dikhata hai, and uske hisab se number round off bhi hota hai.
