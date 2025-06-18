@@ -23,27 +23,27 @@ console.log(testDate); // 2025-06-17T12:56:05.813Z
 */
 
 const specificDate = new Date("2025-06-17"); // YYYY-MM-DD is ISO fomrat (International standards)
-console.log(specificDate); // 2025-06-17T00:00:00.000Z
+console.log(specificDate);         // 2025-06-17T00:00:00.000Z
 // Time specify nhi kiya tha isliye by default exact midnight consider karta hai.
 
 const anotherDate = new Date("10-07-2025"); // MM-DD-YYYY 
-console.log(anotherDate); // 2025-10-06T18:30:00.000Z
+console.log(anotherDate);          // 2025-10-06T18:30:00.000Z
 // Aise by default JS date ko MM-DD-YYYY format mein consider karega.(Not recommended, confusion create karega !!)
 
 const specificDateWithTime = new Date("2025-06-17T12:56:05.813Z");
 console.log(specificDateWithTime); // 2025-06-17T12:56:05.813Z
 
 const dateIST = new Date("2025-06-17T12:56:05.813+05:30"); // Time in IST (+05:30)
-console.log(dateIST); // 2025-06-17T12:56:05.813Z
+console.log(dateIST);              // 2025-06-17T12:56:05.813Z
 // Internally it is converted to UTC (Coordinated Universal Time) format.
 
 const dateTimeHrMinSec = new Date(2025, 5, 17, 12, 56, 5,296); 
 // (year, month(0-based), day, hour, minute, second, milliseconds)
-console.log(dateTimeHrMinSec); // 2025-06-17T07:26:05.296Z
+console.log(dateTimeHrMinSec);     // 2025-06-17T07:26:05.296Z
 
 
-let istDate = new Date("2025-06-17T14:25:30"); // No "Z" => IST (Local system time)
-let utcDate = new Date("2025-06-17T14:25:30Z"); // "Z" => UTC
+let istDate = new Date("2025-06-17T14:25:30");   // No "Z" => IST (Local system time)
+let utcDate = new Date("2025-06-17T14:25:30Z");  // "Z" => UTC
 
 
 // GETTING DATE & TIME COMPONENTS :
