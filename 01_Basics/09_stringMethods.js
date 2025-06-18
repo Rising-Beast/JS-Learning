@@ -171,12 +171,14 @@ console.log(name.replaceAll("a", "&")); // "S&i Ayushm&n P&dhy"
 console.log(name.padStart(10, "abc")); // "Sai Ayushman Padhy"
 console.log(name.padStart(20, "abc")); // "abSai Ayushman Padhy"
 console.log(name.padStart(23, "abc")); // "abcabSai Ayushman Padhy"
+// Naya string targetLength se bda nhi ho skta hai !
 
 
 // 5. padEnd(targetLength, padStr) - String ke ending pad karne ke liye use karte hain.
 console.log(name.padEnd(10, "abc")); // "Sai Ayushman Padhy"
 console.log(name.padEnd(20, "abc")); // "Sai Ayushman Padhyab"
 console.log(name.padEnd(23, "abc")); // "Sai Ayushman Padhyabcab"
+// Naya string targetLength se bda nhi ho skta hai !
 
 
 
