@@ -68,9 +68,10 @@ console.log(date.getMilliseconds());        // 0
 console.log(date.getTime());                // 01/01/1970 se time in ms 
 console.log(Date.now());                    // Abhi ka timestamp (ms)
 console.log(Math.floor(Date.now()/1000));   // Abhi ka timestamp (in sec) 
+console.log(Date.UTC(2025, 5, 17));         // UTC timestamp (month 0-based)
 
 let timeStamp = date.getTime();
-console.log(new Date(timeStamp));           // 2025-06-17T08:55:30.000Z (in UTC for 2025-06-17T14:25:30.000Z)
+console.log(new Date(timeStamp));           // 2025-06-17T08:55:30.000Z (in UTC for 2025-06-17T14:25:30)
 
 
 
@@ -90,10 +91,10 @@ date.setMonth(0);
 date.setDate(10);
 
 // 2. Time Parts
-date.setHours(10); // 2025-06-20T10:25:30.000Z
-date.setMinutes(10); // 2025-06-20T14:10:30.000Z
-date.setSeconds(10); // 2025-06-20T14:25:10.000Z
-date.setMilliseconds(10); // 2025-06-20T14:25:30.010Z
+date.setHours(10);
+date.setMinutes(10);
+date.setSeconds(10);
+date.setMilliseconds(10);
 
 console.log("Updated Date is", date);
 
@@ -116,5 +117,77 @@ console.log(date.getUTCSeconds());             // 30
 console.log(date.getUTCMilliseconds());        // 0
 
 
-// 3. toUTCString - Returns the date and time in UTC format
-console.log(date.toUTCString());               // "Tue, 17 Jun 2025 14:25:30 GMT"
+
+// CONVERSION TO STRING METHODS are :
+date = new Date("2025-06-17T14:25:30");
+
+// 1. toString - Returns the date and time as a string
+console.log(date.toString());              // "Tue Jun 17 2025 14:25:30 GMT+0530 (India Standard Time)"
+
+
+// 2. toDateString - Returns the date as a string
+console.log(date.toDateString());          // "Tue Jun 17 2025"
+
+
+// 3. toTimeString - Returns the time as a string
+console.log(date.toTimeString());          // "14:25:30 GMT+0530 (India Standard Time)"
+
+
+// 4. toUTCString - Returns the date and time in UTC format
+console.log(date.toUTCString());           // "Tue, 17 Jun 2025 08:55:30 GMT"
+
+
+// 5. toISOString - Returns the date and time in ISO format
+console.log(date.toISOString());           // "2025-06-17T14:25:30.000Z"
+
+
+// 6. toJSON - Returns the date and time in JSON format
+console.log(date.toJSON());                // "2025-06-17T14:25:30.000Z"
+// JSON format is the same as ISO format.
+// JSON format is useful in case of JSON API.
+
+
+// 7. toLocaleString - Returns the date and time in local format
+console.log(date.toLocaleString());        // "6/17/2025, 2:25:30 pm"
+
+
+// 8. toLocaleDateString - Returns the date in local format
+console.log(date.toLocaleDateString());    // "6/17/2025"
+
+
+// 9. toLocaleTimeString - Returns the time in local format
+console.log(date.toLocaleTimeString());    // "2:25:30 pm"
+
+
+// PARSING :
+
+// parse() string ko timestamp (numebr type) mein convert karta hai.
+console.log(Date.parse("2025-06-17"));           // 1750118400000
+console.log(Date.parse("2025-06-17T14:25:30"));  // 1750150530000
+console.log(Date.parse("June 17, 2000"));        // 961180200000
+console.log(Date.parse("17/06/2025"));           // NaN (For not supported input)
+
+
+
+// DATE ARITHMETIC :
+// Hum kisi bhi date mein days/months/years add kar sakte hain
+date = new Date("2025-06-17");
+
+date.setDate(date.getDate() + 5); // +5 days
+console.log("+5 days:", date.toDateString());         // "Sun Jun 22 2025"
+
+date.setMonth(date.getMonth() - 1); // -1 month
+console.log("-1 month:", date.toDateString());        // "Thu May 22 2025"
+
+date.setFullYear(date.getFullYear() + 2); // +2 years
+console.log("+2 years:", date.toDateString());        // T"hu Jul 22 2027"
+
+
+
+// COMPARING DATES :
+// getTime ko use kar ke equality check karte hain.
+let d1 = new Date("2025-06-17");
+let d2 = new Date("2025-07-01");
+
+console.log(d2 > d1);                         // true
+console.log(d1.getTime() === d2.getTime());   // false
