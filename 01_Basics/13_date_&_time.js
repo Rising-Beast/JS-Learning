@@ -22,7 +22,7 @@ console.log(testDate); // 2025-06-17T12:56:05.813Z
    Z means "zulu" or UTC (Coordinated Universal Time).
 */
 
-const specificDate = new Date("2025-06-17"); // YYYY-MM-DD is ISO fomrat (international standards)
+const specificDate = new Date("2025-06-17"); // YYYY-MM-DD is ISO fomrat (International standards)
 console.log(specificDate); // 2025-06-17T00:00:00.000Z
 // Time specify nhi kiya tha isliye by default exact midnight consider karta hai.
 
@@ -77,8 +77,8 @@ console.log(new Date(timeStamp));           // 2025-06-17T08:55:30.000Z (in UTC 
 
 // TIMEZONE OFFSET IN MINUTES
 console.log(date.getTimezoneOffset()); // -330 (Time difference between local system time and UTC in min)
-// It's negative for time zones east of UTC (UTC+5:30 → returns -330).
-// It’s positive for time zones west of UTC (UTC-7 → returns 420).
+// It's negative for time zones east of UTC (UTC+5:30 => returns -330).
+// It’s positive for time zones west of UTC (UTC-7 => returns 420).
 
 
 
@@ -121,41 +121,41 @@ console.log(date.getUTCMilliseconds());        // 0
 // CONVERSION TO STRING METHODS are :
 date = new Date("2025-06-17T14:25:30");
 
-// 1. toString - Returns the date and time as a string
+// 1. toString - Returns the date and time as a string.
 console.log(date.toString());              // "Tue Jun 17 2025 14:25:30 GMT+0530 (India Standard Time)"
 
 
-// 2. toDateString - Returns the date as a string
+// 2. toDateString - Returns the date as a string.
 console.log(date.toDateString());          // "Tue Jun 17 2025"
 
 
-// 3. toTimeString - Returns the time as a string
+// 3. toTimeString - Returns the time as a string.
 console.log(date.toTimeString());          // "14:25:30 GMT+0530 (India Standard Time)"
 
 
-// 4. toUTCString - Returns the date and time in UTC format
+// 4. toUTCString - Returns the date and time in UTC format.
 console.log(date.toUTCString());           // "Tue, 17 Jun 2025 08:55:30 GMT"
 
 
-// 5. toISOString - Returns the date and time in ISO format
-console.log(date.toISOString());           // "2025-06-17T14:25:30.000Z"
+// 5. toISOString - Returns the date and time in ISO format (time UTC mein).
+console.log(date.toISOString());           // "2025-06-17T08:55:30.000Z"
 
 
-// 6. toJSON - Returns the date and time in JSON format
+// 6. toJSON - Returns the date and time in JSON format.
 console.log(date.toJSON());                // "2025-06-17T14:25:30.000Z"
 // JSON format is the same as ISO format.
 // JSON format is useful in case of JSON API.
 
 
-// 7. toLocaleString - Returns the date and time in local format
+// 7. toLocaleString - Returns the date and time in local format.
 console.log(date.toLocaleString());        // "6/17/2025, 2:25:30 pm"
 
 
-// 8. toLocaleDateString - Returns the date in local format
+// 8. toLocaleDateString - Returns the date in local format.
 console.log(date.toLocaleDateString());    // "6/17/2025"
 
 
-// 9. toLocaleTimeString - Returns the time in local format
+// 9. toLocaleTimeString - Returns the time in local format.
 console.log(date.toLocaleTimeString());    // "2:25:30 pm"
 
 
@@ -170,7 +170,7 @@ console.log(Date.parse("17/06/2025"));           // NaN (For not supported input
 
 
 // DATE ARITHMETIC :
-// Hum kisi bhi date mein days/months/years add kar sakte hain
+// Hum kisi bhi date mein days/months/years add kar sakte hain.
 date = new Date("2025-06-17");
 
 date.setDate(date.getDate() + 5); // +5 days
