@@ -85,8 +85,8 @@ console.log(myArr);                 // [ 0, 1, 4, 5 ]
 
 
 
-const marvelHeroes = ['Captain America', 'Iron Man', 'Thor'];
-const dcHeroes = ['Batman', 'Superman', 'Flash'];
+const marvelHeroes = ["Captain America", "Iron Man", "Thor"];
+const dcHeroes = ["Batman", "Superman", "Flash"];
 
 marvelHeroes.push(dcHeroes);    // Array ke andar array add karta hai.
 console.log(marvelHeroes);      // [ 'Captain America', 'Iron Man', 'Thor', [ 'Batman', 'Superman', 'Flash' ] ]
