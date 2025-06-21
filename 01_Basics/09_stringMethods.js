@@ -46,7 +46,7 @@ console.log(str1.repeat(3)); // "HelloHelloHello"
 // B. SEARCHING & EXTRACTING
 
 /* If start index is not provided, it is 0 by default.
-   If end index is not provided, it is **taken as the length of the string or array.
+   If end index is not provided, it is taken as the length of the string or array.
 */
 
 // 1. indexOf(searchStr, fromIndex) - String mein koi bhi character ko starting se search karne ke liye use karte hain.
