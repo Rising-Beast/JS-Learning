@@ -45,6 +45,10 @@ console.log(str1.repeat(3)); // "HelloHelloHello"
 
 // B. SEARCHING & EXTRACTING
 
+/* If start index is not provided, it is 0 by default.
+   If end index is not provided, it is **taken as the length of the string or array.
+*/
+
 // 1. indexOf(searchStr, fromIndex) - String mein koi bhi character ko starting se search karne ke liye use karte hain.
 console.log(name.indexOf("Ayushman"));    // 4
 console.log(name.indexOf("y"));           // 5
@@ -76,7 +80,7 @@ console.log(name.endsWith("Padhy")); // true
 console.log(name.endsWith("a"));     // false
 
 
-// 6. slice(start, end) - String mein koi bhi characters ko extract karne ke liye use karte hain.
+// 6. slice(startIndex, endIndex) - String mein koi bhi characters ko extract karne ke liye use karte hain.
 // end ko include nhi karega.
 console.log(name.slice(0, 5));   // "Sai A"
 console.log(name.slice(5));      // "yushman Padhy"
@@ -87,7 +91,7 @@ console.log(name.slice(-15, 5)); // "A"
 // start >= end, empty string return karega.
 
 
-// 7. substring(start, end) - String mein koi bhi characters ko extract karne ke liye use karte hain.
+// 7. substring(startIndex, endIndex) - String mein koi bhi characters ko extract karne ke liye use karte hain.
 // end ko include nhi karega.
 console.log(name.substring(0, 5));   // "Sai A"
 console.log(name.substring(5));      // "yushman Padhy"
@@ -99,7 +103,7 @@ console.log(name.substring(-15));    // "Sai Ayushman Padhy"
 // start >= end, it swaps them automatically => substring(end, start).
 
 
-// 8. substr(start, length) - String mein koi bhi characters ek given length tak extract karta hai.
+// 8. substr(startIndex, length) - String mein koi bhi characters ek given length tak extract karta hai.
 // **DEPRECATED** [Legacy Method]
 console.log(name.substr(0, 5));   // "Sai A"
 console.log(name.substr(5));      // "yushman Padhy"
