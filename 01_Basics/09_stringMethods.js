@@ -17,7 +17,7 @@ console.log(name.length); // 18
 // STRING METHODS are:
 
 
-// A. Basic Manipulation
+// A. BASIC MANIPULATION
 
 // 1. charAt(index) - String mein koi bhi character access kar sakte hain.
 console.log(name.charAt(10)); // "a"
@@ -43,7 +43,7 @@ console.log(str1.repeat(3)); // "HelloHelloHello"
 
 
 
-// B. Searching & Extracting
+// B. SEARCHING & EXTRACTING
 
 // 1. indexOf(searchStr, fromIndex) - String mein koi bhi character ko starting se search karne ke liye use karte hain.
 console.log(name.indexOf("Ayushman"));    // 4
@@ -122,7 +122,7 @@ console.log(name.at(-15)); // "S"
 
 
 
-// C. Case & Whitespace
+// C. CASE & WHITESPACE
 
 // 1. toUpperCase() - String ko uppercase mein convert karne ke liye use karte hain.
 console.log(name.toUpperCase()); // "SAI AYUSHMAN PADHY"
@@ -150,7 +150,7 @@ console.log(name.trimEnd());   // "Sai Ayushman Padhy"
 
 
 
-// D. Splitting & Joining
+// D. SPLITTING & JOINING
 
 // 1. split(separator, limit) - String ko kisi specific delimiter par split karne ke liye use karte hain.
 console.log(name.split(" "));    // ["Sai", "Ayushman", "Padhy"]
@@ -182,7 +182,7 @@ console.log(name.padEnd(23, "abc")); // "Sai Ayushman Padhyabcab"
 
 
 
-// E. Miscellaneous
+// E. MISCELLANEOUS
 
 // 1. loacaleCompare(compareString, locales, {sensitivity: "options"}) - String ko compare karne ke liye use karte hain.
       /* -1 => if the string comes before the compared string.
