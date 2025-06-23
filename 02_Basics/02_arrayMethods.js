@@ -168,3 +168,220 @@ console.log(myArray.toLocaleString('en-IN', {
 myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
 console.log(myArray.slice(1, 4));   // [2, "abc", 4]
 // endIndex is not included in the result.
+
+
+
+// B. MUTATOR METHODS 
+
+// 1. splice(startIndex, deleteCount, ...items) - Delete/Add karta hai.
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.splice(2, 1, 99);
+console.log(myArray);   // [1, 2, 99, 4, null, {hero : "Sai"}, true]
+
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.splice(2, 3, "hello");
+console.log(myArray);   // [ 1, 2, 'hello', { hero: 'Sai' }, true ]
+
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.splice(2, 3, "hello", "my", "world");
+console.log(myArray);   // [ 1, 2, 'hello', 'my', 'world', { hero: 'Sai' }, true ]
+
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.splice(2, 1, 99, 1000);
+console.log(myArray);   // [ 1, 2, 99, 1000, 4, null, { hero: 'Sai' }, true ]
+
+
+// 2. push(value) - End mein add karta hai.
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.push(6);
+console.log(myArray);   // [1, 2, "abc", 4, null, {hero : "Sai"}, true, 6]
+
+
+// 3. pop() - End se remove karta hai.
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.pop();
+console.log(myArray);   // [1, 2, "abc", 4, null, {hero : "Sai"}]
+
+
+// 4. shift() - Starting se remove karta hai.
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.shift();
+console.log(myArray);   // [2, "abc", 4, null, {hero : "Sai"}, true]
+
+
+// 5. unshift(value) - Starting mein add karta hai.
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.unshift(0);
+console.log(myArray);   // [0, 1, 2, "abc", 4, null, {hero : "Sai"}, true]
+
+
+// 6. sort() - Elements ko sort karta hai by converting all elements to strings.
+      /* default - Sort in Ascending order.
+         ((a, b) => a - b) - Sort in Ascending order.
+         ((a, b) => b - a) - Sort in Descending order.
+      */
+myArray = [3, 1, 10, 5, 2];
+myArray.sort();
+console.log(myArray);    // [1, 2, 3, 5, 10]
+myArray.sort((a, b) => b - a);
+console.log(myArray);    // [10, 5, 3, 2, 1]
+// sort is not a stable sort, it doesn't preserve the order of equivalent elements.
+
+myArray = ['Charlie', 'Alice', 'Bob'];
+myArray.sort((a, b) => b - a); // b - a is not applicable on strings (returns NaN)
+console.log(myArray);    // ['Charlie', 'Bob', 'Alice']
+myArray.sort();
+console.log(myArray);    // ['Alice', 'Bob', 'Charlie']
+
+
+// 7. reverse() - Elements ko reverse karta hai.
+myArray = [1, 2, "abc", 4, null, {hero : "Sai"}, true];
+myArray.reverse();
+console.log(myArray);    // [true, { hero: 'Sai' }, null, 4, "abc", 2, 1]
+
+
+// 8. fill(value, startIndex, endIndex) - Array ko values se bhar deta hai.
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.fill(0, 1, 3));  // [1, 0, 0, 4, 5]
+// endIndex is not included.
+
+/* If start index is not provided, it is 0 by default.
+   If end index is not provided, it is taken as the length of the string or array.
+*/
+
+
+// 9. copyWithin(target, startIndex, endIndex) - Ek part ko copy karke dusre jagah daalta hai.
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.copyWithin(1, 2, 4));  // [1, 3, 3, 4, 5]
+
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.copyWithin(1, 2));    // [1, 3, 4, 5, 5]
+
+/* If start index is not provided, it is 0 by default.
+   If end index is not provided, it is taken as the length of the string or array.
+*/
+
+
+// C. NON-MUTATOR MODERN METHODS
+// Non-mutator methods are those methods that don't change the original array.
+let nums = [1, 2, 3];
+
+// 1. toReversed() - reverse() ka non-mutating version.
+console.log(nums.toReversed());  // [3, 2, 1]
+
+
+// 2. toSorted() - sort() ka non-mutating version.
+console.log(nums.toSorted((a, b) => b - a));  // [3, 2, 1]
+
+
+// 3. toSpliced(startIndex, deleteCount, ...items) - splice() ka non-mutating version.
+console.log(nums.toSpliced(1, 1, 9));  // [1, 9, 3]
+
+
+// 4. with(index, value) - Ek index ki value replace karta hai.
+console.log(nums.with(1, 99));  // [1, 99, 3]
+
+
+// 5. flat(depth) - Nested array ko flat banata hai.
+myArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5, [true]]]];
+console.log(myArray.flat(2));          // [ 1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5, [ true ] ]
+console.log(myArray.flat());           // [ 1, 2, 3, 4, 5, 6, 7, 6, 7, [ 4, 5, [ true ] ] ]
+// If depth is not provided, it is 1 by default.
+console.log(myArray.flat(0));          // [ 1, 2, 3, [ 4, 5, 6 ], 7, [ 6, 7, [ 4, 5, [Array] ] ] ]
+// If depth is 0, no flattening happens.
+// Deep nesting hai isliye last ko [true] ke jagah [array] print hua.
+console.log(myArray.flat(Infinity));   // [ 1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5, true ]
+// Infinity means pura array ko flat kardet hai !
+
+
+// 6. flatMap(callback) - map + flat(1)
+myArray = [1, 2, 3, [4, 5, 6]];
+console.log(myArray.flatMap(x => [x, x * 2]));  // [ 1, 2, 2, 4, 3, 6, [ 4, 5, 6 ], NaN ]
+/* After mapping, we get [ [1, 2], [2, 4], [3, 6], [[4, 5, 6], NaN] ] (Array * Number = NaN)
+   After flattening, 1 deep, we get [ 1, 2, 2, 4, 3, 6, [ 4, 5, 6 ], NaN ]
+*/
+
+
+
+// D. ITERATION METHODS
+
+// CALLBACK FUNCTION - Ek function jo dusre function ko argument ke roop mein diya jaata hai, taki wo baad mein call ho sake — jab kaam pura ho jaaye.
+
+// 1. forEach(callback) - Har element ke liye callback call karta hai.
+myArray = [1, 2, "abc", true];
+myArray.forEach((val, i) => console.log(i, val));
+/* Output:
+     0 1
+     1 2
+     2 "abc"
+     3 true
+*/
+
+
+// 2. map(callback) - Har element ko transform karta hai, naya array return karta hai.
+myArray = [1, 2, "abc", true];
+console.log(myArray.map(x => x * 2));  // [2, 4, NaN, 2]
+
+
+// 3. filter(callback) - Condition true hone par element return karta hai
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.filter(x => x % 2 === 0));  // [ 2, 4 ] (even numbers)
+
+
+// 4. find(callback) - Pehla element jo condition satisfy kare usko return karta hai.
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.find(x => x > 2));  // 3
+
+
+// 5. findIndex(callback) - Pehle match ka index.
+myArray = [1, -20, 3, 4, 40];
+console.log(myArray.findIndex(x => x > 2));  // 2
+
+
+// 6. findLast(callback) - Last element jo condition satisfy kare usko return karta hai.
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.findLast(x => x % 2 === 1));  // 5
+
+
+// 7. findLastIndex(callback) - Last match ka index.
+myArray = [1, -20, 3, 4, 40];
+console.log(myArray.findLastIndex(x => x > 2));  // 4
+
+
+// 8. some(callback) - Koi ek bhi element satisfy kare toh true.
+myArray = [1, -20, 3, 4, 40];
+console.log(myArray.some(x => x > 4));     // true
+console.log(myArray.some(x => x < -100));  // false
+
+
+// 9. every(callback) - Sabhi elements satisfy kare toh true.
+myArray = [1, -20, 3, 4, 40];
+console.log(myArray.every(x => x < 100));   // true
+console.log(myArray.every(x => x < -100));  // false
+
+
+// 10. reduce(callback, initial) - Loops through the array from left-to-right and single value return karta hai.
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.reduce((acc, x) => acc + x, 0));   // 15 (Sum of all elements)
+
+myArray = ['a', 'b', 'c', 'd'];
+console.log(myArray.reduce((acc, val) => acc + val));  // "abcd"
+
+
+// 11. reduceRight() - Loops through the array from right-to-left and single value return karta hai.
+myArray = [1, 2, 3, 4, 5];
+console.log(myArray.reduceRight((acc, x) => acc + x, 0));  // 15 (Sum of all elements)
+
+myArray = ['a', 'b', 'c', 'd'];
+console.log(myArray.reduceRight((acc, val) => acc + val));  // "dcba"
+
+
+
+// SPREAD OPERATOR :
+
+// (...) spread operator - Do ya zyada arrays ko jodta hai, naya array return karta hai.
+const marvelHeroes = ["Captain America", "Iron Man", "Thor"];
+const dcHeroes = ["Batman", "Superman", "Flash"];
+const hero = [ "Shah Rukh Khan" ];
+myArray = [...marvelHeroes, ...dcHeroes, ...hero, "Spiderman"];
+console.log(myArray);  // [ 'Captain America', 'Iron Man', 'Thor', 'Batman', 'Superman', 'Flash', 'Shah Rukh Khan', 'Spiderman' ]
