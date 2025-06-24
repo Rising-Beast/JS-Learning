@@ -1,9 +1,9 @@
-const score = 400; // Automatically number type assign hota hai.
+const score = 400;         // Automatically number type assign hota hai.
 console.log(typeof score); // number
 
 const balance = new Number(500.82896); // Number object create hota hai.
-console.log(typeof balance); // object (Number object)
-console.log(balance); // [Number: 500.82896]
+console.log(typeof balance);           // object (Number object)
+console.log(balance);                  // [Number: 500.82896]
 
 const amount = 856321534.5864;
 
@@ -11,7 +11,7 @@ const amount = 856321534.5864;
 // NUMBER METHODS are:
 
 // 1. toString() - Number ko string mein convert karta hai.
-console.log(balance.toString()); // "500.82896"
+console.log(balance.toString());        // "500.82896"
 // Ab hame iske upar string methods use kar sakte hain.
 console.log(balance.toString().length); // 9
 
