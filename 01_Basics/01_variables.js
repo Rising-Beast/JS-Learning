@@ -5,6 +5,7 @@
 // let: Declares a block-scoped variable, optionally initializing it to a value.
 // const: Declares a block-scoped, read-only constant.
 
+
 // Variable ka naam aise hona chahiye ki usse variable ka purpose samajh aaye.
 
 const accountId = 198214; 
@@ -31,6 +32,7 @@ accountCity = "Delhi";
    let aur const block scope ke andar hi kaam karte hain, isliye yeh zyada safe hain.
 */
 
+
 let accountState; 
 // Agar sirf variable declare karke chod dete hein, toh uski value undefined hoti hai.
 let state = undefined;
@@ -42,8 +44,10 @@ accountEmail = "saiayush123@example.com";
 accountPassword = "67890";
 accountCity = "Mumbai";
 
+
+// table() - Data ko table format mein display karte hain.
 console.table([ accountId, accountEmail, accountPassword, accountCity, accountState ]);
-// table() function se data ko table format mein display karte hain.
+
 
 /* Prefer not to use var,
    because of the use of block scope and function scope in modern JavaScript.
