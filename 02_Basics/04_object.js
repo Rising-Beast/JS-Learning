@@ -118,3 +118,43 @@ console.log(Object.entries(instaUser)); // [ [ 'id', '123abc' ], [ 'name', 'Sai 
 
 // hasOwnProperty() - Returns true if the object has the specified property, otherwise false.
 console.log(instaUser.hasOwnProperty("isLogged")); // false
+
+
+
+// OBJECT DESTRUCTURING
+
+const course = {
+    courseName: "JavaScript in Hindi",
+    price: "999",
+    courseInstructor: "Sai Ayushman Padhy"
+};
+
+/* To access courseInstructor, ham course.courseInstructor kar skte hein,
+   but yeh baar baar likhna thoda pareshan karta hain.
+   Isliye ham uss object ko destructuring karte hain,
+   taki ham baas woh property ke naam se uss property ko access kar ske !
+*/
+
+const { courseInstructor } = course;
+console.log(courseInstructor);  // Sai Ayushman Padhy
+
+// Uss property ko ek unique name bhi de skte hain.
+const { courseInstructor: instructor } = course;
+console.log(instructor);  // Sai Ayushman Padhy
+
+
+
+// SIMPLE METHOD IN REACT.js :
+
+/* const navbar = (props.company) => {
+       ...
+   }
+   navbar(company = "Google");
+
+   // Idhar props.company baar baar likhne ke jagah, idhar bhi destructuring karte hain.
+
+   const navbar = ({company}) => {
+       ...
+   }
+   navbar(company = "Google");
+*/
