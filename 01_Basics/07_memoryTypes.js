@@ -36,6 +36,7 @@ console.log(anotherName); // Rising Beast
    toh "myName" par koi effect nahi hota.
 */
 
+
 let userOne = {
     name: "Sai Ayushman Padhy",
     age: 20
