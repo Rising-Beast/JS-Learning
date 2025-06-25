@@ -3,36 +3,41 @@
 // String() - string mein convert karta hai
 // Boolean() - boolean mein convert karta hai
 
+
 let score = "56";
 let scoreNumber = Number(score);
-console.log(scoreNumber); // 56
+console.log(scoreNumber);        // 56
 console.log(typeof scoreNumber); // number
 
 score = "56abc";
 scoreNumber = Number(score);
-console.log(scoreNumber); // NaN (Not a Number)
+console.log(scoreNumber);        // NaN (Not a Number)
 console.log(typeof scoreNumber); // number
 
 // NaN ka matlab hai ki value, number mein convert nahi ho sakti !
 
+
 score = null;
 scoreNumber = Number(score);
-console.log(scoreNumber); // 0
+console.log(scoreNumber);        // 0
 console.log(typeof scoreNumber); // number
+
 
 score = undefined;
 scoreNumber = Number(score);
-console.log(scoreNumber); // NaN
+console.log(scoreNumber);        // NaN
 console.log(typeof scoreNumber); // number
+
 
 score = true;
 scoreNumber = Number(score);
-console.log(scoreNumber); // 1
+console.log(scoreNumber);        // 1
 console.log(typeof scoreNumber); // number
+
 
 score = false;
 scoreNumber = Number(score);
-console.log(scoreNumber); // 0
+console.log(scoreNumber);        // 0
 console.log(typeof scoreNumber); // number
 
 // To Number conversion rules :
@@ -44,19 +49,23 @@ console.log(typeof scoreNumber); // number
 // null => 0 
 // undefined => NaN
 
+
+
 let isLoggedIn = 1;
 let isLoggedInBoolean = Boolean(isLoggedIn);
-console.log(isLoggedInBoolean); // true
+console.log(isLoggedInBoolean);        // true
 console.log(typeof isLoggedInBoolean); // boolean
+
 
 isLoggedIn = "";
 isLoggedInBoolean = Boolean(isLoggedIn);
-console.log(isLoggedInBoolean); // false
+console.log(isLoggedInBoolean);        // false
 console.log(typeof isLoggedInBoolean); // boolean
+
 
 isLoggedIn = "abc";
 isLoggedInBoolean = Boolean(isLoggedIn);
-console.log(isLoggedInBoolean); // true
+console.log(isLoggedInBoolean);        // true
 console.log(typeof isLoggedInBoolean); // boolean
 
 // To Boolean conversion rules :
@@ -69,9 +78,11 @@ console.log(typeof isLoggedInBoolean); // boolean
 // NaN => false
 // 56 => true
 
+
+
 let someNumber = 56;
 let someNumberString = String(someNumber);
-console.log(someNumberString); // "56"
+console.log(someNumberString);        // "56"
 console.log(typeof someNumberString); // string
 
 // To String conversion rules :
