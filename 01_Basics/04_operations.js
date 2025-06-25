@@ -67,7 +67,7 @@ console.log(str1 * 2 ); // NaN (Not a Number, because you can't multiply a strin
 console.log("1" + 2); // 12
 console.log(1 + "2"); // 12
 console.log("1" + "2"); // 12
-console.log("1" + 2 + "3"); // 33
+console.log("1" + 2 + "3"); // 123
 console.log("1" + 2 + 3); // 123
 console.log(1 + 2 + "3"); // 33
 console.log(1 + 2 + "3" + 4 + 5); // 3345
