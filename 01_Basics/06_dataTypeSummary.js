@@ -25,21 +25,21 @@
 
 const str1 = "Hello"; // String
 
-const num = 42; // Number
+const num = 42;       // Number
 
 const bigNum = 1234567890123456789012345678901234567890n; // BigInt
 // BigInt ke liye 'n' suffix use karte hain.
 
-const isTrue = true; // Boolean
+const isTrue = true;        // Boolean
 
 const userName = undefined; // Undefined
 
-const userEmail = null; // Null
+const userEmail = null;     // Null
 
 const uniqueID = Symbol("unique"); // Symbol
 // Symbol ka use unique identifiers banane ke liye hota hai.
 const id = Symbol("unique");
-console.log(uniqueID === id); // false
+console.log(uniqueID === id);      // false
 // Symbol mein same value dene se bhi, returned value alag hoti hai.
 
 
@@ -78,9 +78,9 @@ myFunc(); // Hello from myFunc!
 //        Function  =>  function
 //        Object  =>  object
 
-console.log(typeof uniqueID); // symbol
 
-console.log(typeof heroes); // object
-console.log(typeof person); // object
-console.log(typeof myFunc); // function
+console.log(typeof uniqueID); // symbol
+console.log(typeof heroes);   // object
+console.log(typeof person);   // object
+console.log(typeof myFunc);   // function
 // function ka return type ko object-function kehte hain.
