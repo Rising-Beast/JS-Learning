@@ -115,3 +115,46 @@ console.log(addTwo(4)); // 6
    tab agar function declaration se pehle usko call karenge, 
    toh error ayega !!
 */
+
+
+
+// Function Scope :
+/* 
+   A variable is accessible only within the function it is declared in.
+   It is not accessible outside the function. 
+   -> Created using 'var'.
+   -> 'var' DOES NOT follow block scope.
+*/
+
+/* function test() {
+       if (true) {
+           var x = 10;
+       }
+       console.log(x); // 10 — because var is function scoped
+   }
+   test();
+   console.log(x); // ReferenceError: x is not defined
+*/
+
+
+
+// Block Scope :
+/* 
+   A variable is accessible only within the block (like if, for, {}) it is declared in.
+   It is not accessible outside the block.
+   -> Created using 'let' or 'const'.
+   -> 'let' and 'const' follow BOTH function scope and block scope.
+*/
+
+/* function test() {
+       if (true) {
+           let x = 10;
+           const y = 20;
+       }
+       console.log(x); // ReferenceError: x is not defined
+       console.log(y); // ReferenceError: y is not defined
+   }
+   test();
+   console.log(x); // ReferenceError: x is not defined
+   console.log(y); // ReferenceError: y is not defined
+*/
