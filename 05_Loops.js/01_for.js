@@ -14,6 +14,14 @@
         5. Repeat: The process repeats until the condition becomes false.
 */
 
+/* Default 'for' Loop Structure :
+
+        for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                // code to be executed
+        };
+*/
+
 
 
 for (let i = 0; i < 4; i++) {
