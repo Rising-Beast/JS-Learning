@@ -37,6 +37,11 @@ const myArr3 = new Array(1, 2, 3, 4, 5);
 console.log(myArr3);           // [ 1, 2, 3, 4, 5 ]
 
 
+const myArray = ["Captain America", "Iron Man", "Thor", "Captain America"];
+console.log(myArray);  // [ 'Captain America', 'Iron Man', 'Thor', 'Captain America' ]
+// Duplicate values are allowed.
+
+
 myArr = [0, 1, 2, 3, 4, 5];
 
 // push() - element ko array ke last me add karta hai.
