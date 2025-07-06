@@ -95,6 +95,30 @@ console.log(typeof symUser[mySymbol]);  // string
 */
 
 
+let myObject = {
+    name: "Sai Ayushman",
+    age : 20
+};
+console.log(myObject); // { name: 'Sai Ayushman', age: 20 }
+
+myObject = {
+    name: "Sai Ayushman",
+    age : 20,
+    name: "Sai Ayushman"
+};
+console.log(myObject); // { name: 'Sai Ayushman', age: 20 }
+// Duplicate key-value pair not allowed
+
+myObject = {
+    name: "Sai Ayushman",
+    age : 20,
+    name: "Sai Ayushman Padhy"
+};
+console.log(myObject); // { name: 'Sai Ayushman Padhy', age: 20 }
+// Same key, different value (value override hoga)
+
+
+
 // MODIFY OBJECT PROPERTY
 jsUser.email = "saiayushmanpadhy@gmail";
 console.log(jsUser.email);   // saiayushmanpadhy@gmail
