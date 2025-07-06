@@ -95,6 +95,7 @@ console.log(typeof symUser[mySymbol]);  // string
 */
 
 
+
 let myObject = {
     name: "Sai Ayushman",
     age : 20
@@ -150,7 +151,7 @@ symUser = {
 symUser.greeting = function() {
     console.log("Hello JS User !!");
 };
-symUser.greeting(); // Hello JS User !!
+symUser.greeting();             // Hello JS User !!
 console.log(symUser.greeting);  // [Function (anonymous)]
 // Function ka reference aya h, func execute nhi hua hai. (Mtlb greeting property ka value, ek function hai !)
 console.log(symUser.greeting()); 
