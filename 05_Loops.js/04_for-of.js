@@ -1,6 +1,13 @@
 // for....of Loop :
 
-// Specifically designed to iterate over iterable objects like arrays, strings, maps, sets, etc.
+/* BEST FOR :
+        - Iterating over iterable objects like arrays, strings, maps, sets, etc.
+    
+    BEST USE CASE :
+        - Reading values from an array.
+        - Iterating over a string.
+        - Looping through Set, Map.
+*/
 
 /* SYNTAX :
         for (const iterator of iterable) {
@@ -40,18 +47,18 @@ for (const char of myString) {
     console.log(`Each character is: ${char}`);
 };
 /* Output :
-        Each character is: S
-        Each character is: a
-        Each character is: i
-        Each character is:  
-        Each character is: A
-        Each character is: y
-        Each character is: u
-        Each character is: s
-        Each character is: h
-        Each character is: m
-        Each character is: a
-        Each character is: n
+        "Each character is: S"
+        "Each character is: a"
+        "Each character is: i"
+        "Each character is:  "
+        "Each character is: A"
+        "Each character is: y"
+        "Each character is: u"
+        "Each character is: s"
+        "Each character is: h"
+        "Each character is: m"
+        "Each character is: a"
+        "Each character is: n"
 */
 
 
@@ -77,9 +84,9 @@ for (const key of map.keys()) {
     console.log(key);
 };
 /* Output :
-        IN
-        US
-        CA
+        "IN"
+        "US"
+        "CA"
 */
 
 
@@ -87,9 +94,9 @@ for (const [key] of map) {
     console.log(key);
 };
 /* Output :
-        India
-        United States
-        Canada
+        "India"
+        "United States"
+        "Canada"
 */
 
 
@@ -97,9 +104,9 @@ for (const [key, value] of map) {
     console.log(key, "=", value);
 };
 /* Output :
-        IN = India
-        US = United States
-        CA = Canada
+        "IN = India"
+        "US = United States"
+        "CA = Canada"
 */
 
 
