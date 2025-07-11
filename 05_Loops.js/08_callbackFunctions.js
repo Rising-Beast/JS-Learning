@@ -118,27 +118,28 @@ numbers.forEach(function(num) {
 // Example of Callback in Real Life Scenario :
 
 function bookTicketWhenAvailable(callKarnaBhai) {
-    console.log("Filhal show full hai bhai...");
+    console.log("Box office: Filhal show full hai bhai...");
 
     setTimeout(() => {
-        console.log("Ab seat available hai! Bhai sunn...");
-        callKarnaBhai(); // yeh tera diya hua callback
+        console.log("Box office: Ab seat available hai! Bhai sunn...");
+        console.log("Box office: Bhai call lagate hue.....");
+        callKarnaBhai(); // yeh hamara hua callback
     }, 5000); // simulate 5 second wait
 };
 
 function onTicketAvailable() {
-    console.log("Seat availabe hai bhai !? Sach mein kya !!!! ");
-    console.log("Chal bhai ticket leke entry maarte hain !!");
+    console.log("Me: Seat availabe hai bhai !? Sach mein kya !!!! ");
+    console.log("Me: Chaloooo ticket leke entry maarte hain !!");
 };
 
 bookTicketWhenAvailable(onTicketAvailable);
 
 /* Output :
-        Filhal show full hai bhai...
-        (5 seconds baad)
-        Ab seat available hai! Bhai sunn...
-        Seat availabe hai bhai !? Sach mein kya !!!!
-        Chal bhai ticket leke entry maarte hain !!
+        "Box office: Filhal show full hai bhai..."
+        "Box office: Ab seat available hai! Bhai sunn..."
+        "Box office: Bhai call lagate hue....."
+        "Me: Seat availabe hai bhai !? Sach mein kya !!!! "
+        "Me: Chaloooo ticket leke entry maarte hain !!
 */
 
 
