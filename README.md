@@ -46,3 +46,6 @@ Aaj ke zamane me web development ka matlab hi JavaScript se hai — chahe user i
 ### Resources
 * **ECMAScript 2026**: https://tc39.es/ecma262/multipage/#sec-intro
 * **MDN WebDocs**: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+### Guide
+* **Chai aur Code**: Hitesh Choudhary @ https://github.com/hiteshchoudhary
